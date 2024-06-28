@@ -1,12 +1,11 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="RPS_Server.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Сервер Камінь-Ножиці-Папір" Height="400" Width="600">
     <Grid>
-
+        <Button Content="Запустити сервер" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Click="StartServerButton_Click"/>
+        <TextBlock Name="ServerLog" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,50,0,0" Width="580" Height="300" TextWrapping="Wrap"/>
     </Grid>
 </Window>
+
+    
