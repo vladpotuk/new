@@ -25,7 +25,7 @@ namespace WpfApp1
 
         private void StartServerButton_Click(object sender, RoutedEventArgs e)
         {
-            server = new TcpListener(127.0.0.1, 5000);
+            server = new TcpListener(IPAddress.Any, 5000);
             server.Start();
             Log("Сервер запущено...");
 
@@ -69,7 +69,7 @@ namespace WpfApp1
                     clientMoves[client] = clientMessage;
                     if (clientMoves.Count == clients.Count)
                     {
-                        // Обробка ходів всіх клієнтів
+                        
                         ProcessRound();
                         clientMoves.Clear();
                         round++;
