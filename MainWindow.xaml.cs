@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Windows;
 
-namespace RPS_Server
+namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
@@ -25,7 +25,7 @@ namespace RPS_Server
 
         private void StartServerButton_Click(object sender, RoutedEventArgs e)
         {
-            server = new TcpListener(IPAddress.Any, 5000);
+            server = new TcpListener(127.0.0.1, 5000);
             server.Start();
             Log("Сервер запущено...");
 
@@ -86,7 +86,7 @@ namespace RPS_Server
 
         private void ProcessRound()
         {
-            // Обробка логіки гри
+            
             foreach (var client in clients)
             {
                 string move1 = clientMoves[clients[0]];
